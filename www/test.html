@@ -8,7 +8,7 @@
 <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 </head>
 <body>
-<div data-role="page">
+<div data-role="page" id="main">
 
     <div data-role="header">
         <h1>My Title</h1>
@@ -17,7 +17,7 @@
     <div data-role="content">
         <p>Hello world</p>
         <ul data-role="listview" data-inset="true" data-filter="true">
-            <li><a href="http://caldining.berkeley.edu/meal-plans/points">Mealpoints</a></li>
+            <li><a href="#mealpoints">Mealpoints</a></li>
             <li><a href="#">Campus Map</a></li>
             <li><a href="#">Discover</a></li>
             <li><a href="https://www.ocf.berkeley.edu/~vlo/BerkeleyResources.php">Utility</a></li>
@@ -29,5 +29,23 @@
     </div><!-- /footer -->
 
 </div><!-- /page -->
+<!-- Start of second page -->
+<div data-role="page" id="mealpoints">
+
+	<div data-role="header">
+		<h1>Bar</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+		<p><a href="#main">Back to foo</a></p>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
 </body>
 </html>
