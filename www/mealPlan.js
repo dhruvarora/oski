@@ -18,8 +18,7 @@ function newplan() {
     orig = startingPoints[plan];
     var elem = document.getElementById('mpDisplay');
     
-    //var dt = new Date();
-    var dt = new Date(2014, 9, 23);
+    var dt = new Date();
     //var days = Math.floor((new Date(2014, 7, 24) - new Date(2014, 7, 21))/86400/1000);
     var days = Math.floor((dt - startdt )/86400/1000);
     
