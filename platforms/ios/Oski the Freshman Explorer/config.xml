@@ -19,9 +19,6 @@
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
-    <feature name="StatusBar">
-        <param name="ios-package" onload="true" value="CDVStatusBar" />
-    </feature>
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarStyle" value="lightcontent" />
     <name>Oski the Freshman Explorer</name>
@@ -32,11 +29,16 @@
         The Oski Team
     </author>
     <content src="index.html" />
-    <preference name="BackgroundColor" value="#f1c40f" />
     <access origin="*" />
     <icon gap:platform="ios" height="16" src="res/icon/ios/bear-16.png" width="16" />
     <icon gap:platform="ios" height="20" src="res/icon/ios/bear-20.png" width="20" />
     <icon gap:platform="ios" height="64" src="res/icon/ios/bear-64.png" width="64" />
     <icon gap:platform="ios" height="128" src="res/icon/ios/bear-128.png" width="128" />
     <icon gap:platform="ios" height="256" src="res/icon/ios/bear-256.png" width="256" />
+    <gap:plugin name="org.apache.cordova.statusbar" version="0.1.8" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+    <feature name="StatusBar">
+        <param name="ios-package" onload="true" value="CDVStatusBar" />
+        <param name="ios-package" onload="false" value="CDVStatusBar" />
+    </feature>
 </widget>
