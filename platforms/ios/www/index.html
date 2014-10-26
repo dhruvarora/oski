@@ -7,47 +7,45 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css">
     <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/app.js"></script>
 </head>
 
 <body>
 <div data-role="page" id="main">
     <div data-role="header">
+
         <h1>Oski the Freshman Explorer</h1>
     </div>
-
     <div data-role="content">
-        <p>Hello world</p>
-        <ul data-role="listview" data-inset="true" data-filter="true">
-            <li><a href="#mealpoints">Mealpoints</a></li>
-            <li><a href="#">Campus Map</a></li>
-            <li><a href="#">Discover</a></li>
-            <li><a href="https://www.ocf.berkeley.edu/~vlo/BerkeleyResources.php">Utility</a></li>
-        </ul>
+        <div class="ui-grid-b">
+            <div class="ui-block-a"><a href="#mealpoints"><button class="ui-shadow ui-btn ui-corner-all">Meal Points</button></a></div>
+            <div class="ui-block-b"><a href="#mealpoints"><button class="ui-shadow ui-btn ui-corner-all">Campus Map</button></a></div>
+            <div class="ui-block-c"><a href="#mealpoints"><button class="ui-shadow ui-btn ui-corner-all">Discover</button></a></div>
+            <div class="ui-block-a"><a href="#mealpoints"><button class="ui-shadow ui-btn ui-corner-all">Utility</button></a></div>
+        </div>
     </div><!-- /content -->
-
-    <div data-role="footer">
-        <h4>My Footer</h4>
-    </div><!-- /footer -->
-
 </div><!-- /page -->
-<!-- Start of second page -->
-<div data-role="page" id="mealpoints">
 
+<!-- Start of second page -->
+<div data-role="page" id="mealpoints" data-add-back-btn="true">
     <div data-role="header">
-        <h1>Bar</h1>
+        <a href="#main" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" data-rel="back"></a>
+        <h1>Meal Points</h1>
     </div><!-- /header -->
 
     <div role="main" class="ui-content">
-        <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-        <p><a href="#main">Back to foo</a></p>
+        <select id="mpPlan" name="mpPlanSelect" data-shadow="false">
+            <option value="1">Standard</option>
+            <option value="2">Premium</option>
+            <option value="3">Ultimate</option>
+            <option value="4">Blue</option>
+            <option value="5">Gold</option>
+            <option value="6">Platinum</option>
+        </select>
+        <script src='mealPlan.js'></script>
+        <div id='mpDisplay'>hi</div>
     </div><!-- /content -->
-
-    <div data-role="footer">
-        <h4>Page Footer</h4>
-    </div><!-- /footer -->
 </div><!-- /page -->
 
-<script type="text/javascript" src="cordova.js"></script>
-<script src="js/app.js"></script>
 </body>
 </html>
