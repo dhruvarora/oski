@@ -2,6 +2,6 @@
     "use strict";
     $( document ).on( "deviceready", function(){
         StatusBar.overlaysWebView( false );
-        StatusBar.backgroundColorByName("grey");
+        StatusBar.backgroundColorByName("black");
     });
 })(jQuery);
