@@ -14,7 +14,9 @@
     <icon gap:platform="ios" height="64" src="res/icon/ios/bear-64.png" width="64" />
     <icon gap:platform="ios" height="128" src="res/icon/ios/bear-128.png" width="128" />
     <icon gap:platform="ios" height="256" src="res/icon/ios/bear-256.png" width="256" />
-    <preference name="StatusBarOverlaysWebView" value="true" />
-    <preference name="StatusBarBackgroundColor" value="#FFFFFF" />
-    <preference name="StatusBarStyle" value="lightcontent" />
+    <gap:plugin name="org.apache.cordova.statusbar" version="0.1.8" />
+    <gap:plugin name="org.apache.cordova.splashscreen" /> <!-- Splashscreen plugin -->
+    <feature name="StatusBar">
+      <param name="ios-package" value="CDVStatusBar" onload="false" />
+    </feature>
 </widget>
