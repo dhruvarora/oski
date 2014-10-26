@@ -18,8 +18,8 @@
     <div data-role="content">
         <div class="ui-grid-b">
             <div class="ui-block-a"><a href="#mealpoints"><button class="ui-shadow ui-btn ui-corner-all">Mealpoints</button></a></div>
-            <div class="ui-block-b"><a href="#mealpoints"><button class="ui-shadow ui-btn ui-corner-all">Campus Map</button></a></div>
-            <div class="ui-block-c"><a href="#mealpoints"><button class="ui-shadow ui-btn ui-corner-all">Discover</button></a></div>
+            <div class="ui-block-b"><a href="http://berkeley.edu/map/"><button class="ui-shadow ui-btn ui-corner-all">Campus Map</button></a></div>
+            <div class="ui-block-c"><a href="#foodRec"><button class="ui-shadow ui-btn ui-corner-all">Restaurants</button></a></div>
             <div class="ui-block-a"><a href="#mealpoints"><button class="ui-shadow ui-btn ui-corner-all">Utility</button></a></div>
         </div>
     </div><!-- /content -->
@@ -31,12 +31,10 @@
 </div><!-- /page -->
 <!-- Start of second page -->
 <div data-role="page" id="mealpoints">
-
     <div data-role="header">
         <h1>Bar</h1>
     </div><!-- /header -->
-
-    <div role="main" class="ui-content">
+    <div data-role="content" class="ui-content">
         <select id="mpPlan" name="mpPlanSelect" data-shadow="false">
             <option value="1">Standard</option>
             <option value="2">Premium</option>
@@ -55,7 +53,56 @@
     </div><!-- /footer -->
 </div><!-- /page -->
 
-<script type="text/javascript" src="cordova.js"></script>
+<div data-role="page" id="foodRec">
+    <div data-role="header">
+        <h1>Recommended Places</h1>
+    </div><!-- /header -->
+
+    <div data-role="content" class="ui-content">
+
+        <div data-role="collapsibleset" data-theme="a" data-content-theme="b">
+                <div data-role="collapsible">
+                    <h2>Gypsies</h2>
+                        <ul data-role="listview" data-theme="a" data-divider-theme="b">
+                                <li><h3>Description</h3>
+                    <p>Italian</p>
+
+                    </li>
+                    <li><h2>Favorite Dishes</h2>
+                    <div id='flist1'></div>
+                         <label for="text-1">Add a dish:</label>
+     <input type="text" name="addfood1" id="addfood1">
+     <button class='ui-block-a' onclick="addFood(flist1,addfood1)">Add</button>
+                    </li>
+
+                        </ul>        
+                </div>
+        </div>
+<script src="foodAdd.js"></script>
+
+
+
+
+
+
+        <div id="foodlist">
+            <ul data-role="listview" data-filter="true" data-filter-placeholder="Search fruits..." data-inset="true">
+                <li><a href="#">Gypsies</a></li>
+                <li><a href="#">Thai Basil</a></li>
+                <li><a href="#">Kingpin Donuts</a></li>
+                <li><a href="#">Quickly Boba</a></li>
+                <li><a href="#">Mandarin House</a></li>
+                <li><a href="#">Vietnam Village</a></li>
+            </ul>
+        </div>
+        <p><a href="#main">Back to foo</a></p>
+    </div><!-- /content -->
+
+    <div data-role="footer">
+        <h4>Page Footer</h4>
+    </div><!-- /footer -->
+</div><!-- /page -->
+<!--<script type="text/javascript" src="cordova.js"></script>-->
 <script src="js/app.js"></script>
 </body>
 </html>
